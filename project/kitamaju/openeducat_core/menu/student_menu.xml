@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_km_student_root"
+            name="Students"
+            sequence="25"
+            web_icon="openeducat_core,static/description/icon_student.png"
+            groups="openeducat_core.group_km_back_office_admin,openeducat_core.group_km_faculty" />
+        <menuitem id="menu_km_student_main_student"
+            name="Profile"
+            parent="menu_km_student_root"
+            sequence="20"
+            action="act_km_student_view_2"
+            groups="group_km_back_office_admin,openeducat_core.group_km_faculty" />
+
+        <menuitem id="menu_km_general_student"
+            parent="menu_km_student_root"
+            sequence="20"
+            name="General" />
+
+        <menuitem id="subject_registration_student_menu"
+            name="Subject Registration"
+            parent="openeducat_core.menu_km_general_student"
+            sequence="30"
+            action="act_subject_registration_view"
+            groups="openeducat_core.group_km_back_office_admin,openeducat_core.group_km_faculty" />
+
+        <menuitem id="student_course_menu"
+            name="Student Course Detail"
+            parent="openeducat_core.menu_km_general_student"
+            sequence="40"
+            action="act_km_student_course_view"
+            groups="openeducat_core.group_km_back_office_admin,openeducat_core.group_km_faculty" />
+    </data>
+</odoo>
